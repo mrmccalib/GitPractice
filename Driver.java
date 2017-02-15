@@ -5,11 +5,16 @@ import static java.lang.System.*;
 
 public class Driver
 {
+
+	private static Employee harry;
    public static void main(String[] args)
    {
       // because of the import statement, we don't have to use
       // edu.csbsju.cs.Employee here
-      Employee harry = new Employee("Harry Hacker", 50000, 1989, 10, 1);
+      harry = new Employee("Harry Hacker", 50000, 1989, 10, 1);
+
+      // Raise employee's salary by 10%
+      harry.raiseSalary(10);
 
       // print out information about harry
       // use java.lang.System.out here
@@ -17,6 +22,6 @@ public class Driver
    }
 
    public String toString() {
-       return harry.getName() + ", " + harry.getSalary() + ", " harry.getHireDay();
+       return harry.getName() + ", " + harry.getSalary() + ", " + harry.getHireDay();
    }
 }
